@@ -23,24 +23,24 @@ public class CheckEmailTest {
     // Valid email addresses
     static Stream<String> validEmailProvider() {
         return Stream.of(
-                "hello@example.com",                // simple
-                "hello@example.co.uk",              // .co.uk, 2 tld
-                "hello-2023@example.com",           // -
-                "hello.2023@example.com",           // .
-                "hello_2023@example.com",           // _
-                "h@example.com");                   // local-part one letter
+                "hahah@haha.com",                // simple
+                "hahah@hahah.co.uk",              // .co.uk, 2 tld
+                "hhahah-2023@hahah.com",           // -
+                "hahah.2023@hahah.com",           // .
+                "hahah_2023@hahah.com",           // _
+                "h@hahah.com");                   // local-part one letter
     }
 
     // Invalid email addresses
     static Stream<String> invalidEmailProvider() {
         return Stream.of(
-                "hello",                            // email need at least one @
-                "hello@2020@example.com",           // email doesn't allow more than one @
-                ".hello@example.com",               // local-part can't start with a dot .
-                "hello.@example.com",               // local-part can't end with a dot .
-                "hello@example.a",                  // domain tld min 2 chars
-                "hello@example..com",               // domain doesn't allow dot . appear consecutively
-                "hello@.com");                      // domain doesn't start with a dot .
+                "hahah",                            // email need at least one @
+                "hahah@2023@hahah.com",           // email doesn't allow more than one @
+                ".hahah@hahah.com",               // local-part can't start with a dot .
+                "hahah.@hahah.com",               // local-part can't end with a dot .
+                "hahah@hahah.a",                  // domain tld min 2 chars
+                "hahah@hahah..com",               // domain doesn't allow dot . appear consecutively
+                "hahah@.com");                      // domain doesn't start with a dot .
 
     }
 
